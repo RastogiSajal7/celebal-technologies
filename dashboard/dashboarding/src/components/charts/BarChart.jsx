@@ -1,6 +1,6 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { lineChartData } from '../../data/dummyData.js';
+import { lineChartData } from '../../data/dummyData.jsx';
 
 
 const processData = (data) => {

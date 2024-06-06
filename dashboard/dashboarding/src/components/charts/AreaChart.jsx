@@ -1,6 +1,6 @@
 import React from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { lineChartData } from '../../data/dummyData.js';
+import { lineChartData } from '../../data/dummyData.jsx';
 
 // Convert the date objects to a format that recharts can handle
 const processData = (data) => {

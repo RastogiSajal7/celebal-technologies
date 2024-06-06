@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, Typography, Grid, Button, Paper, TextField, Box } from '@mui/material';
 import { useStateContext } from '../contexts/ContextProvider';
-import { tasksData } from '../data/dummyData.js';
+import { tasksData } from '../data/dummyData.jsx';
 
 // Function to format tasks data into columns
 const formatTasksData = (tasks) => {

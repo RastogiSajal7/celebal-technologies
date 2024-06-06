@@ -1,5 +1,5 @@
 import React from 'react';
-import {tasksData} from '../data/dummyData.js';
+import {tasksData} from '../data/dummyData.jsx';
 
 const Table = () => {
   return (
