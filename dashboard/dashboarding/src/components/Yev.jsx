@@ -62,7 +62,7 @@ const Yev = () => {
 
   // Function to darken the current color for dark mode
   const darkenColor = (color) => {
-    if (!color) return color; // Return the color unchanged if it's not defined
+    if (!color) return color; 
     const colorHex = color.replace('#', '');
     const r = parseInt(colorHex.substring(0, 2), 16);
     const g = parseInt(colorHex.substring(2, 4), 16);
@@ -83,11 +83,11 @@ const Yev = () => {
       }`}
     >
       <div className="relative h-screen pt-5 pl-6 pr-5">
-        <div className="grid grid-cols-4 gap-1 mb-1 mt-8">
+        <div className="grid grid-cols-4 gap-2 mb-1 mt-8">
           {appItems.map((item, index) => (
             <div
               key={index}
-              className={`app-item col-span-2 hover:bg-blue-300 rounded-2xl h-20 p-3 cursor-pointer ${
+              className={`app-item col-span-2 bg-slate-200 hover:bg-blue-300 rounded-2xl h-20 p-3 cursor-pointer ${
                 currentMode === "Dark" ? "text-white" : "text-black"
               }`}
               style={{ backgroundColor: currentMode === 'Dark' ? darkenColor(currentColor || "#ffffff") : currentColor }}
@@ -104,7 +104,7 @@ const Yev = () => {
           {chartsItems.map((item, index) => (
             <div
               key={index}
-              className={`rounded-full h-20 p-6 text-center hover:bg-blue-300 ${
+              className={`rounded-full bg-slate-200 h-20 p-6 text-center hover:bg-blue-300 ${
                 currentMode === "Dark" ? "text-white" : "text-black"
               }`}
               style={{ backgroundColor: currentMode === 'Dark' ? darkenColor(currentColor || "#ffffff") : currentColor }}
