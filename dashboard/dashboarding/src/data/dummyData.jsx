@@ -3,6 +3,10 @@ import avatar from '../assets/avatar.jpg';
 import avatar2 from '../assets/avatar2.jpg';
 import avatar3 from '../assets/avatar3.png';
 import avatar4 from '../assets/avatar4.jpg';
+import avatar5 from '../assets/avatar5.png';
+import avatar6 from '../assets/avatar6.jpg';
+import avatar7 from '../assets/avatar7.jpg';
+import avatar8 from '../assets/avatar8.png';
 
 export const tasksData = [
   { task: "Design Landing Page", deadline: "2024-06-15", status: "Completed" },
@@ -108,7 +112,7 @@ export const clients = [
   "project_end_date": "2024-03-31",
   "status": "In Progress",
   "budget": 150000,
-  "image": avatar
+  "image": avatar5
 },
 {
   "client_id": 6,
@@ -121,7 +125,7 @@ export const clients = [
   "project_end_date": "2024-05-31",
   "status": "In Progress",
   "budget": 200000,
-  "image": avatar3
+  "image": avatar
 },
 {
   "client_id": 7,
@@ -134,7 +138,7 @@ export const clients = [
   "project_end_date": "2024-08-31",
   "status": "Pending",
   "budget": 300000,
-  "image": avatar4 
+  "image": avatar7 
 },
 {
   "client_id": 8,
@@ -147,7 +151,7 @@ export const clients = [
   "project_end_date": "2024-12-31",
   "status": "Pending",
   "budget": 250000,
-  "image": avatar2
+  "image": avatar8
 },
 {
   "client_id": 9,
@@ -160,7 +164,7 @@ export const clients = [
   "project_end_date": "2024-09-30",
   "status": "In Progress",
   "budget": 400000,
-  "image": avatar4
+  "image": avatar2
 },
 {
   "client_id": 10,
@@ -173,7 +177,7 @@ export const clients = [
   "project_end_date": "2024-10-31",
   "status": "Pending",
   "budget": 350000,
-  "image": avatar2
+  "image": avatar4
 },
 {
   "client_id": 11,
@@ -186,7 +190,7 @@ export const clients = [
   "project_end_date": "2024-11-30",
   "status": "In Progress",
   "budget": 280000,
-  "image": avatar3
+  "image": avatar
 },
 {
   "client_id": 12,
@@ -199,7 +203,7 @@ export const clients = [
   "project_end_date": "2025-01-31",
   "status": "Pending",
   "budget": 320000,
-  "image": avatar3
+  "image": avatar5
 },
 {
   "client_id": 13,
@@ -212,7 +216,7 @@ export const clients = [
   "project_end_date": "2025-02-28",
   "status": "In Progress",
   "budget": 270000,
-  "image": avatar2
+  "image": avatar
 },
 {
   "client_id": 14,
@@ -238,7 +242,7 @@ export const clients = [
   "project_end_date": "2025-04-30",
   "status": "In Progress",
   "budget": 350000,
-  "image": avatar2
+  "image": avatar7
 },
 // {
 //   "client_id": 16,
