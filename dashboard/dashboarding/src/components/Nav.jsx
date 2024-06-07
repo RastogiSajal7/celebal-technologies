@@ -5,10 +5,10 @@ import { FaLaptopCode } from "react-icons/fa6";
 import { PiCertificateFill } from "react-icons/pi";
 import { MdPeopleAlt } from "react-icons/md";
 import { IoMdSettings } from "react-icons/io";
-import man from "../assets/man.jpg";
 import { useStateContext } from "../contexts/ContextProvider";
 import Portfolio from "./Portfolio";
 import ClientProjects from "./ClientProjects";
+import Theme from "./Theme";
 
 
 const Nav = () => {
@@ -31,7 +31,7 @@ const Nav = () => {
     { icon: <FaLaptopCode className="text-xl" />, label: "Projects" },
     { icon: <PiCertificateFill className="text-xl" />, label: "Progress" },
     { icon: <MdPeopleAlt className="text-xl" />, label: "Clients", component: <ClientProjects/> },
-    { icon: <IoMdSettings className="text-xl" />, label: "Settings" },
+    { icon: <IoMdSettings className="text-xl" />, label: "Settings", component: <Theme/>},
   ];
 
   return (
@@ -57,7 +57,6 @@ const Nav = () => {
             </div>
           ))}
         </div>
-        {/* <img src={man} className="rounded-2xl w-full md:mt-40 " alt="Profile" /> */}
         </div> 
       )}
     </div>

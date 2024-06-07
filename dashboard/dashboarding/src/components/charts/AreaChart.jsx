@@ -2,11 +2,11 @@ import React from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { lineChartData } from '../../data/dummyData.jsx';
 
-// Convert the date objects to a format that recharts can handle
+
 const processData = (data) => {
   return data.map((series) => 
     series.map(point => ({
-      x: point.x.getTime(), // Convert Date to timestamp
+      x: point.x.getTime(),
       y: point.y,
     }))
   );
@@ -19,6 +19,8 @@ const MyAreaChart = () => {
   const processedData = processData(lineChartData);
 
   return (
+    <div className="p-4">
+      <h1 className="text-2xl text-slate-600 font-bold mb-4">Themes & Modes</h1>
     <ResponsiveContainer width="100%" height={400}>
       <AreaChart>
         <CartesianGrid strokeDasharray="3 3" stroke="#ccc" />
@@ -47,6 +49,7 @@ const MyAreaChart = () => {
         ))}
       </AreaChart>
     </ResponsiveContainer>
+  </div>
   );
 };
 

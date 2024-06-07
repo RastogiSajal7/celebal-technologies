@@ -1,57 +1,63 @@
-import React from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import React, { useRef, useEffect } from 'react';
+import Chart from 'chart.js/auto';
+
 import { lineChartData } from '../../data/dummyData.jsx';
 
-
-const processData = (data) => {
-  return data.map((series) => 
-    series.map(point => ({
-      x: point.x.getTime(), 
-      y: point.y,
-    }))
-  );
-};
-
-
-const barColors = ['#8884d8', '#82ca9d', '#ff7300'];
-
 const MyBarChart = () => {
-  const processedData = processData(lineChartData);
+  const chartRef = useRef(null);
+  let chartInstance = null;
 
-  
-  const combinedData = processedData[0].map((_, index) => {
-    const item = { x: processedData[0][index].x };
-    processedData.forEach((series, seriesIndex) => {
-      item[`y${seriesIndex}`] = series[index].y;
+  useEffect(() => {
+    
+    const processedData = lineChartData.map(series => 
+      series.map(point => ({
+        x: point.x.getTime(), 
+        y: point.y,
+      }))
+    );
+
+    const ctx = chartRef.current.getContext('2d');
+
+    chartInstance = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: processedData[0].map(point => new Date(point.x).getFullYear()),
+        datasets: processedData.map((series, index) => ({
+          label: `Series ${index + 1}`,
+          data: series.map(point => point.y),
+          backgroundColor: `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 0.6)`,
+          borderColor: `rgba(0, 0, 0, 0.1)`, 
+          borderWidth: 1 
+        }))
+      },
+      options: {
+        scales: {
+          x: {
+            type: 'linear', 
+            position: 'bottom' 
+          },
+          y: {
+            beginAtZero: true 
+          }
+        }
+      }
     });
-    return item;
-  });
+
+    return () => {
+    
+      if (chartInstance) {
+        chartInstance.destroy();
+      }
+    };
+  }, []);
 
   return (
-    <ResponsiveContainer width="100%" height={400} className="w-full overflow-x-auto">
-      <BarChart data={combinedData}>
-        <CartesianGrid strokeDasharray="3 3" stroke="#ccc" />
-        <XAxis 
-          dataKey="x" 
-          type="number" 
-          domain={['dataMin', 'dataMax']}
-          tickFormatter={(tick) => new Date(tick).getFullYear()}
-        />
-        <YAxis />
-        <Tooltip 
-          labelFormatter={(label) => new Date(label).toDateString()}
-        />
-        <Legend verticalAlign="top" height={36} />
-        {processedData.map((_, index) => (
-          <Bar
-            key={index}
-            dataKey={`y${index}`}
-            fill={barColors[index % barColors.length]}
-            name={`Series ${index + 1}`}
-          />
-        ))}
-      </BarChart>
-    </ResponsiveContainer>
+    <div className="p-4">
+      <h1 className="text-2xl text-slate-600 font-bold mb-4">Themes & Modes</h1>
+      <div style={{ width: '100%', overflowX: 'auto' }}>
+        <canvas ref={chartRef}></canvas>
+      </div>
+    </div>
   );
 };
 

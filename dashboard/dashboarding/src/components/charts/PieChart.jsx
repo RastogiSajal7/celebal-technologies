@@ -22,6 +22,8 @@ const MyPieChart = () => {
   const processedData = processData(lineChartData);
 
   return (
+    <div className="p-4">
+      <h1 className="text-2xl text-slate-600 font-bold mb-4">Themes & Modes</h1>
     <ResponsiveContainer width="100%" height={400}>
       <PieChart>
         <Tooltip />
@@ -42,6 +44,7 @@ const MyPieChart = () => {
         </Pie>
       </PieChart>
     </ResponsiveContainer>
+  </div>
   );
 };
 
