@@ -19,34 +19,6 @@ export const tasksData = [
   { task: "Create Marketing Strategy", deadline: "2024-07-25", status: "Pending" },  
 ];
 
-export const lineChartData = [
-  [
-    { x: new Date(2019, 0, 1), y: 21 },
-    { x: new Date(2020, 0, 1), y: 24 },
-    { x: new Date(2021, 0, 1), y: 36 },
-    { x: new Date(2022, 0, 1), y: 38 },
-    { x: new Date(2023, 0, 1), y: 54 },
-    { x: new Date(2024, 0, 1), y: 70 },
-  ],
-  [
-    { x: new Date(2019, 0, 1), y: 28 },
-    { x: new Date(2020, 0, 1), y: 44 },
-    { x: new Date(2021, 0, 1), y: 48 },
-    { x: new Date(2022, 0, 1), y: 50 },
-    { x: new Date(2023, 0, 1), y: 66 },
-    { x: new Date(2024, 0, 1), y: 78 },
-  ],
-
-  [
-    { x: new Date(2019, 0, 1), y: 10 },
-    { x: new Date(2020, 0, 1), y: 20 },
-    { x: new Date(2021, 0, 1), y: 30 },
-    { x: new Date(2022, 0, 1), y: 39 },
-    { x: new Date(2023, 0, 1), y: 50 },
-    { x: new Date(2024, 0, 1), y: 70 },
-  ],
-];
-
 export const clients = [
 {
   "client_id": 1,
@@ -243,71 +215,6 @@ export const clients = [
   "budget": 350000,
   "image": avatar7
 },
-// {
-//   "client_id": 16,
-//   "client_name": "Strickland Propane",
-//   "contact_person": "Hank Hill",
-//   "email": "hank.hill@stricklandpropane.com",
-//   "phone": "555-7878",
-//   "project_name": "Propane Sales Optimization",
-//   "project_start_date": "2024-06-10",
-//   "project_end_date": "2025-05-31",
-//   "status": "Pending",
-//   "budget": 280000,
-//   "image": avatar2
-// },
-// {
-//   "client_id": 17,
-//   "client_name": "Umbrella Corporation",
-//   "contact_person": "Albert Wesker",
-//   "email": "albert.wesker@umbrellacorp.com",
-//   "phone": "555-2222",
-//   "project_name": "Bio-Organic Weapons Research",
-//   "project_start_date": "2024-07-01",
-//   "project_end_date": "2025-06-30",
-//   "status": "In Progress",
-//   "budget": 400000,
-//   "image": avatar2
-// },
-// {
-//   "client_id": 18,
-//   "client_name": "Bluth Company",
-//   "contact_person": "Michael Bluth",
-//   "email": "michael.bluth@bluthcompany.com",
-//   "phone": "555-9999",
-//   "project_name": "Real Estate Development",
-//   "project_start_date": "2024-08-15",
-//   "project_end_date": "2025-07-31",
-//   "status": "Pending",
-//   "budget": 320000,
-//   "image": avatar2
-// },
-// {
-//   "client_id": 19,
-//   "client_name": "Cyberdyne Systems",
-//   "contact_person": "Miles Dyson",
-//   "email": "miles.dyson@cyberdyne.com",
-//   "phone": "555-6666",
-//   "project_name": "Skynet AI Development",
-//   "project_start_date": "2024-09-01",
-//   "project_end_date": "2025-08-31",
-//   "status": "In Progress",
-//   "budget": 500000,
-//   "image": avatar2
-// },
-// {
-//   "client_id": 20,
-//   "client_name": "Spinal Tap",
-//   "contact_person": "Nigel Tufnel",
-//   "email": "nigel.tufnel@spinaltap.com",
-//   "phone": "555-1111",
-//   "project_name": "Rockumentary Production",
-//   "project_start_date": "2024-10-10",
-//   "project_end_date": "2025-09-30",
-//   "status": "Pending",
-//   "budget": 300000,
-//   "image": avatar2
-// },
 ];
 
 export const themeColors = [
@@ -347,6 +254,123 @@ export const modeColor = [
     color: '#333',
   }
 ]
+
+export const EditorData = () => (
+  <div>
+    <h3>
+    React is designed for gradual adoption, making it suitable for a range of projects, from adding interactivity to a simple HTML page to developing complex web applications. Developers can experiment with React using online playgrounds like CodePen, CodeSandbox, or Stackblitz, or by editing and running a local HTML file. Adding React to an existing website is straightforward and can start small before expanding. For new projects, starting with a simple HTML setup is quick, but more integrated toolchains are recommended as the app grows to leverage the full React ecosystem. Learning resources are available for various styles, including practical tutorials, step-by-step guides, and beginner-friendly overviews. A basic understanding of JavaScript is recommended to ease the learning curve.
+    </h3>
+  </div>
+);
+
+export const chartsData = {
+  line: {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+    datasets: [
+      {
+        label: 'Sales',
+        data: [65, 59, 80, 81, 56, 55],
+        borderColor: 'rgba(75,192,192,1)',
+        backgroundColor: 'rgba(75,192,192,0.2)',
+      },
+    ],
+  },
+  bar: {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+    datasets: [
+      {
+        label: 'Revenue',
+        data: [65, 59, 80, 81, 56, 55],
+        backgroundColor: 'rgba(75,192,192,0.6)',
+      },
+    ],
+  },
+  radar: {
+    labels: ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling'],
+    datasets: [
+      {
+        label: 'My First Dataset',
+        data: [65, 59, 90, 81, 56, 55],
+        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        borderColor: 'rgba(75, 192, 192, 1)',
+      },
+    ],
+  },
+  doughnut: {
+    labels: ['Red', 'Blue', 'Yellow'],
+    datasets: [
+      {
+        label: 'My First Dataset',
+        data: [300, 50, 100],
+        backgroundColor: ['rgba(255, 99, 132, 0.6)', 'rgba(54, 162, 235, 0.6)', 'rgba(255, 206, 86, 0.6)'],
+      },
+    ],
+  },
+  pie: {
+    labels: ['Red', 'Blue', 'Yellow'],
+    datasets: [
+      {
+        label: 'My First Dataset',
+        data: [300, 50, 100],
+        backgroundColor: ['rgba(255, 99, 132, 0.6)', 'rgba(54, 162, 235, 0.6)', 'rgba(255, 206, 86, 0.6)'],
+      },
+    ],
+  },
+  polarArea: {
+    labels: ['Red', 'Green', 'Yellow', 'Grey', 'Blue'],
+    datasets: [
+      {
+        label: 'My First Dataset',
+        data: [11, 16, 7, 3, 14],
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.6)',
+          'rgba(75, 192, 192, 0.6)',
+          'rgba(255, 206, 86, 0.6)',
+          'rgba(201, 203, 207, 0.6)',
+          'rgba(54, 162, 235, 0.6)',
+        ],
+      },
+    ],
+  },
+  bubble: {
+    datasets: [
+      {
+        label: 'My First Dataset',
+        data: [
+          { x: 20, y: 30, r: 15 },
+          { x: 40, y: 10, r: 10 },
+        ],
+        backgroundColor: 'rgba(75, 192, 192, 0.6)',
+      },
+    ],
+  },
+  scatter: {
+    datasets: [
+      {
+        label: 'Scatter Dataset',
+        data: [
+          { x: -10, y: 0 },
+          { x: 0, y: 10 },
+          { x: 10, y: 5 },
+          { x: 0.5, y: 5.5 },
+        ],
+        backgroundColor: 'rgba(75, 192, 192, 0.6)',
+      },
+    ],
+  },
+  area: {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+    datasets: [
+      {
+        label: 'My First dataset',
+        data: [65, 59, 80, 81, 56, 55, 40],
+        fill: true,
+        backgroundColor: 'rgba(75,192,192,0.2)',
+        borderColor: 'rgba(75,192,192,1)',
+      },
+    ],
+  },
+};
 
 const dummyData = () => {
 

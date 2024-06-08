@@ -3,7 +3,7 @@ import {tasksData} from '../data/dummyData.jsx';
 
 const Table = () => {
   return (
-    <div className="bg-slate-100 rounded-2xl p-2 mt-4 pt-4 ">
+    <div className="bg-slate-900 text-slate-100 rounded-2xl p-2 mt-4 pt-4 ">
             <p className="border border-slate-700 w-full"></p>
             <div className="grid grid-cols-3 text-center ">
               <div className="col-span-1">

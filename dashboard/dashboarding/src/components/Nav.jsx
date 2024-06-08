@@ -9,7 +9,7 @@ import { useStateContext } from "../contexts/ContextProvider";
 import Portfolio from "./Portfolio";
 import ClientProjects from "./ClientProjects";
 import Theme from "./Theme";
-
+import Projects from "./Projects";
 
 const Nav = () => {
   const [nav, showNav] = useState(true);
@@ -28,7 +28,7 @@ const Nav = () => {
 
   const navItems = [
     { icon: <RiHome5Fill className="text-xl" />, label: "Home", component: <Portfolio/>},
-    { icon: <FaLaptopCode className="text-xl" />, label: "Projects" },
+    { icon: <FaLaptopCode className="text-xl" />, label: "Projects", component: <Projects/> },
     { icon: <PiCertificateFill className="text-xl" />, label: "Progress" },
     { icon: <MdPeopleAlt className="text-xl" />, label: "Clients", component: <ClientProjects/> },
     { icon: <IoMdSettings className="text-xl" />, label: "Settings", component: <Theme/>},

@@ -11,12 +11,19 @@ import { useStateContext } from "../contexts/ContextProvider";
 import MyKanbanBoard from "./MyKanbanBoard";
 import Calendar from './Calendar';
 import Table from "./Table";
+import './charts/chartSetup.js';
 import LineChart from "./charts/LineChart";
 import AreaChart from "./charts/AreaChart";
 import BarChart from "./charts/BarChart";
 import PieChart from "./charts/PieChart";
 import Theme from "./Theme";
 import '../../src/globals.css';
+import RadarChart from "./charts/RadarChart";
+import DoughnutChart from "./charts/DoughtNutChart";
+import PolarAreaChart from "./charts/PolarAreaChart.jsx";
+import BubbleChart from "./charts/BubbleChart.jsx";
+import ScatterChart from "./charts/scatterChart.jsx";
+import MixedChart from "./charts/MixedChart.jsx";
 
 const Yev = () => {
   const appItems = [
@@ -31,6 +38,12 @@ const Yev = () => {
     { icon: <FaChartArea />, label: "AreaChart", component: <AreaChart /> },
     { icon: <VscGraph />, label: "BarChart", component: <BarChart /> },
     { icon: <FaChartPie />, label: "PieChart", component: <PieChart /> },
+    {icon: <BsKanbanFill/>, label: "RadarChart", component: <RadarChart/>},
+    { icon: <FaChartPie />, label: "DoughtnutChart", component: <DoughnutChart /> },
+    { icon: <FaChartPie />, label: "PolarAreaChart", component: <PolarAreaChart /> },
+    { icon: <FaChartPie />, label: "BubbleChart", component: <BubbleChart/> },
+    { icon: <FaChartPie />, label: "ScatterChart", component: <ScatterChart/> },
+    { icon: <FaChartPie />, label: "MixedChart", component: <MixedChart/> },
   ];
 
   const { setMyState, currentColor, currentMode } = useStateContext();
