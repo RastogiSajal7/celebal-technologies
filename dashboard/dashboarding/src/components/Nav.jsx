@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { MdSpaceDashboard } from "react-icons/md";
 import { RiHome5Fill } from "react-icons/ri";
 import { FaLaptopCode } from "react-icons/fa6";
-import { PiCertificateFill } from "react-icons/pi";
 import { MdPeopleAlt } from "react-icons/md";
 import { IoMdSettings } from "react-icons/io";
 import { useStateContext } from "../contexts/ContextProvider";
@@ -29,7 +28,6 @@ const Nav = () => {
   const navItems = [
     { icon: <RiHome5Fill className="text-xl" />, label: "Home", component: <Portfolio/>},
     { icon: <FaLaptopCode className="text-xl" />, label: "Projects", component: <Projects/> },
-    { icon: <PiCertificateFill className="text-xl" />, label: "Progress" },
     { icon: <MdPeopleAlt className="text-xl" />, label: "Clients", component: <ClientProjects/> },
     { icon: <IoMdSettings className="text-xl" />, label: "Settings", component: <Theme/>},
   ];

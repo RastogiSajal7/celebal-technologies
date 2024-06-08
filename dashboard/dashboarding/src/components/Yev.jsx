@@ -7,6 +7,12 @@ import { FaChartArea } from "react-icons/fa";
 import { VscGraph } from "react-icons/vsc";
 import { FaChartPie } from "react-icons/fa";
 import { BsTable } from "react-icons/bs";
+import { RiRadarLine } from "react-icons/ri";
+import { BiSolidDoughnutChart } from "react-icons/bi";
+import { PiChartPolarBold } from "react-icons/pi";
+import { MdBubbleChart } from "react-icons/md";
+import { PiChartScatterFill } from "react-icons/pi";
+import { LuFilePieChart } from "react-icons/lu";
 import { useStateContext } from "../contexts/ContextProvider";
 import MyKanbanBoard from "./MyKanbanBoard";
 import Calendar from './Calendar';
@@ -38,12 +44,12 @@ const Yev = () => {
     { icon: <FaChartArea />, label: "AreaChart", component: <AreaChart /> },
     { icon: <VscGraph />, label: "BarChart", component: <BarChart /> },
     { icon: <FaChartPie />, label: "PieChart", component: <PieChart /> },
-    {icon: <BsKanbanFill/>, label: "RadarChart", component: <RadarChart/>},
-    { icon: <FaChartPie />, label: "DoughtnutChart", component: <DoughnutChart /> },
-    { icon: <FaChartPie />, label: "PolarAreaChart", component: <PolarAreaChart /> },
-    { icon: <FaChartPie />, label: "BubbleChart", component: <BubbleChart/> },
-    { icon: <FaChartPie />, label: "ScatterChart", component: <ScatterChart/> },
-    { icon: <FaChartPie />, label: "MixedChart", component: <MixedChart/> },
+    {icon:  <RiRadarLine/>, label: "RadarChart", component: <RadarChart/>},
+    { icon: <BiSolidDoughnutChart/>, label: "DoughtnutChart", component: <DoughnutChart /> },
+    { icon: <PiChartPolarBold />, label: "PolarAreaChart", component: <PolarAreaChart /> },
+    { icon: <MdBubbleChart />, label: "BubbleChart", component: <BubbleChart/> },
+    { icon: <PiChartScatterFill />, label: "ScatterChart", component: <ScatterChart/> },
+    { icon: <LuFilePieChart />, label: "MixedChart", component: <MixedChart/> },
   ];
 
   const { setMyState, currentColor, currentMode } = useStateContext();
